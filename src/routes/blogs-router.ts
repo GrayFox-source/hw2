@@ -32,7 +32,7 @@ blogsRouter.post('/',
     inputValidationMiddleware,
     (req:RequestWithBody<BlogInputModel>, res) => {
         const newBlog = blogsRepository.createBlog(req.body)
-        res.status(200).send(newBlog)
+        res.status(201).send(newBlog)
     })
 
 blogsRouter.put('/:id',
